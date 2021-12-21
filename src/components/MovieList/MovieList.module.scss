@@ -1,0 +1,22 @@
+.form {
+    margin: 32px 0;
+}
+
+.preview {
+    margin-bottom: 24px;
+    padding: 16px;
+    border: 1px solid #eee;
+
+    &__field {
+        margin: 4px 0;
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+}
+
+.pagination {
+    margin: 16px 0;
+    text-align: center;
+}

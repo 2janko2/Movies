@@ -1,0 +1,13 @@
+.movie {
+    &__field {
+        margin: 8px 0;
+    }
+
+    &__label {
+        font-weight: 600;
+    }
+
+    &__actors {
+        margin: 16px 0 28px;
+    }
+}

@@ -1,0 +1,12 @@
+.form {
+    text-align: center;
+
+    &__error {
+        margin: 16px 0 0;
+        text-align: center;
+    }
+
+    &__btn {
+        margin: 24px 0;
+    }
+}

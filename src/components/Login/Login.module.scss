@@ -1,0 +1,13 @@
+.form {
+    margin: 0 0 20px;
+
+    &__error {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+    }
+}

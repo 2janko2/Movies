@@ -1,3 +1,4 @@
+import { MOVIES_PER_PAGE } from "constants/constants";
 import { axiosInstance } from "./api";
 
 export const moviesAPI = {
@@ -37,7 +38,7 @@ export const moviesAPI = {
             });
     },
 
-    getMovieList(offset = 0, limit = 12, sort = "id", order = "ASC", title, actor) {
+    getMovieList(offset = 0, limit = MOVIES_PER_PAGE, sort = "id", order = "ASC", title, actor) {
         let url = `api/v1/movies?offset=${offset}&limit=${limit}&sort=${sort}&order=${order}`;
         if (title) url += `&title=${title}`;
         if (actor) url += `&actor=${actor}`;

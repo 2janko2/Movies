@@ -2,6 +2,7 @@ import { Spin, Typography, Row, Col, Form, Input, Select, Button, Pagination } f
 import { useForm, Controller } from "react-hook-form";
 import { Link } from "react-router-dom";
 
+import { MOVIES_PER_PAGE } from "constants/constants";
 import styles from "./MovieList.module.scss";
 
 const { Title } = Typography;
@@ -18,12 +19,19 @@ const MovieList = ({ isLoading, movieList, getMovieList }) => {
     });
 
     const onSubmit = (data) => {
-        getMovieList(data.offset, 12, data.sort, data.order, data.title, data.actor);
+        getMovieList(
+            data.pageNumber ? (data.pageNumber - 1) * MOVIES_PER_PAGE : 0,
+            MOVIES_PER_PAGE,
+            data.sort,
+            data.order,
+            data.title,
+            data.actor
+        );
     };
 
     const onPageChange = (pageNumber) => {
         onSubmit({
-            offset: pageNumber - 1,
+            pageNumber,
             sort: getValues("sort"),
             order: getValues("order"),
             title: getValues("title"),
